@@ -45,48 +45,51 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text('Ex2'),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Container(
-              width: 200,
-              height: 200,
-              color: Colors.yellow,
-              child: Center(
-                child: Container(
-                  width: 100,
-                  height: 100,
-                  color: Colors.blue,
-                )
+        child: SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Container(
+                width: 200,
+                height: 200,
+                color: Colors.yellow,
+                child: Center(
+                  child: Container(
+                    width: 100,
+                    height: 100,
+                    color: Colors.blue,
+                  )
+                ),
               ),
-            ),
-            const SizedBox(height: 10),
-            Container(
-              width: 200,
-              height: 200,
-              decoration: BoxDecoration(
-                color: Colors.red,
-                borderRadius: BorderRadius.circular(20),
+              const SizedBox(width: 10, height: 10),
+              Container(
+                width: 200,
+                height: 200,
+                decoration: BoxDecoration(
+                  color: Colors.red,
+                  borderRadius: BorderRadius.circular(20),
+                ),
               ),
-            ),
-            const SizedBox(height: 10),
-            Container(
-              width: 200,
-              height: 200,
-              decoration:  BoxDecoration(
-                color: Colors.teal,
-                borderRadius: BorderRadius.circular(30),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.5),
-                    spreadRadius: 5,
-                    blurRadius: 7,
-                    offset: const Offset(0, 3), // changes position of shadow
-                  ),
-                ],
+              const SizedBox(width: 10, height: 10),
+              Container(
+                width: 200,
+                height: 200,
+                decoration:  BoxDecoration(
+                  color: Colors.teal,
+                  borderRadius: BorderRadius.circular(30),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.5),
+                      spreadRadius: 5,
+                      blurRadius: 7,
+                      offset: const Offset(0, 3), // changes position of shadow
+                    ),
+                  ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
